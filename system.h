@@ -1,14 +1,18 @@
 #include <iostream>
 #if defined(_WIN32)
     #define PLATFORM_NAME "windows" // Windows
+    #define log_path "C:\\Users\\<username>\\AppData\\Local\\Temp"
 #elif defined(_WIN64)
     #define PLATFORM_NAME "windows" // Windows
+    #define log_path "C:\\Users\\<username>\\AppData\\Local\\Temp"
 #elif defined(__CYGWIN__) && !defined(_WIN32)
     #define PLATFORM_NAME "windows" // Windows (Cygwin POSIX under Microsoft Window)
+    #define log_path "C:\\Users\\<username>\\AppData\\Local\\Temp"
 #elif defined(__ANDROID__)
     #define PLATFORM_NAME "android" // Android (implies Linux, so it must come first)
 #elif defined(__linux__)
     #define PLATFORM_NAME "linux" // Debian, Ubuntu, Gentoo, Fedora, openSUSE, RedHat, Centos and other
+    #define log_path "/tmp/"
 #elif defined(__unix__) || defined(__APPLE__) && defined(__MACH__)
     #include <sys/param.h>
     #if defined(BSD)
