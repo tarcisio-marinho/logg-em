@@ -3,6 +3,10 @@
 #include <cstring>
 #include "error.h"
 
+void create_log_file(const char * path){
+    FILE * f = fopen("")
+}
+
 void logg(const char * path, const char *open_type){
     FILE * f = fopen(path, open_type);
 

@@ -1,5 +1,5 @@
-#ifndef Error
-#define Error
+#ifndef Error_H
+#define Error_H
 #include <iostream>
 
 class Error{
