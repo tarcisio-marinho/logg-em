@@ -9,3 +9,7 @@ void Error::error_and_exit(const char * msg){
 void Error::warning(const char * msg){
     std::cout << msg << std::endl;
 }
+
+void Error::print_msg(const char *msg){
+    std::cout << msg << std::endl;
+}

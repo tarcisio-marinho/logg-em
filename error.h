@@ -6,7 +6,7 @@ class Error{
 public:
     static void error_and_exit(const char *);
     static void warning(const char *);
-
+    static void print_msg(const char *);
 };
 
 #endif
