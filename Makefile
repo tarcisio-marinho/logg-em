@@ -3,7 +3,7 @@ OUTPUT=main
 RM=rm
 VERSION=-std=c++11
 
-main: main.o system.o error.o
+main: main.o system.o error.o utils.o
 	$(CC) main.o error.o -o $(OUTPUT) $(VERSION)
 
 main.o: main.cpp 
@@ -14,6 +14,9 @@ system.o: system.h
 
 error.o: error.cpp error.h
 	$(CC) -c error.cpp -o error.o $(VERSION)
+
+utils.o: utils.cpp utils.h
+	$(CC) -c utils.cpp -o utils.o $(VERSION)
 
 clean:
 	$(RM) *.o $(OUTPUT)
