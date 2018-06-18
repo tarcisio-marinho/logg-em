@@ -1,18 +1,22 @@
 #include <iostream>
 #if defined(_WIN32)
     #define PLATFORM_NAME "windows" // Windows
-    #define log_path "C:\\Users\\<username>\\AppData\\Local\\Temp"
+    #define log_path "C:\\Users\\<username>\\AppData\\Local\\Temp\\logg-em.log"
+    #define log_folder "C:\\Users\\<username>\\AppData\\Local\\Temp\\logg-em/"
 #elif defined(_WIN64)
     #define PLATFORM_NAME "windows" // Windows
-    #define log_path "C:\\Users\\<username>\\AppData\\Local\\Temp"
+    #define log_path "C:\\Users\\<username>\\AppData\\Local\\Temp\\logg-em.log"
+    #define log_folder "C:\\Users\\<username>\\AppData\\Local\\Temp\\logg-em/"
 #elif defined(__CYGWIN__) && !defined(_WIN32)
     #define PLATFORM_NAME "windows" // Windows (Cygwin POSIX under Microsoft Window)
-    #define log_path "C:\\Users\\<username>\\AppData\\Local\\Temp"
+    #define log_path "C:\\Users\\<username>\\AppData\\Local\\Temp\\logg-em.log"
+    #define log_folder "C:\\Users\\<username>\\AppData\\Local\\Temp\\logg-em/"
 #elif defined(__ANDROID__)
     #define PLATFORM_NAME "android" // Android (implies Linux, so it must come first)
 #elif defined(__linux__)
     #define PLATFORM_NAME "linux" // Debian, Ubuntu, Gentoo, Fedora, openSUSE, RedHat, Centos and other
-    #define log_path "/tmp/"
+    #define log_path "/tmp/logg-em/logg-em.log"
+    #define log_folder "/tmp/logg-em/"
 #elif defined(__unix__) || defined(__APPLE__) && defined(__MACH__)
     #include <sys/param.h>
     #if defined(BSD)
